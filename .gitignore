@@ -1,8 +1,7 @@
-tt.*
-.tests
-doc/tags
-debug
-.repro
-foo.*
-*.log
-data
+# macOS
+.DS_Store
+
+# Zed runtime data
+zed/conversations/
+zed/prompts/
+zed/themes/
