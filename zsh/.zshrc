@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -107,6 +107,27 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# Faster key repeat in terminal
+export KEYTIMEOUT=1
+
+# Better history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_DUPS
+setopt SHARE_HISTORY
+
+# Your aliases from the git guide
+alias lg="lazygit"
+alias gs="git status -s"
+alias gl="git log --oneline --graph --decorate --all"
+alias gp="git push"
+alias gpl="git pull"
+
+# Flutter shortcuts
+alias frun="flutter run"
+alias fbuild="flutter build ios"
+alias fclean="flutter clean && flutter pub get"
+alias fpub="flutter pub get"
 
 # Created by `pipx` on 2025-08-14 01:06:41
 export PATH="$PATH:/Users/jamesaguero/.local/bin"
