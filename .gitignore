@@ -1,10 +1,2 @@
 # macOS
 .DS_Store
-
-# oh-my-tmux managed symlink
-tmux/tmux.conf
-
-# Zed runtime data
-zed/conversations/
-zed/prompts/
-zed/themes/

@@ -102,6 +102,10 @@ return {
     },
   },
 
+  -- ─── Disable LazyVim bundled colorschemes (we use snazzy) ─────────────────
+  { "folke/tokyonight.nvim", enabled = false },
+  { "catppuccin/nvim", enabled = false },
+
   -- ─── Colorscheme ──────────────────────────────────────────────────────────
   { "connorholyday/vim-snazzy" },
   {
