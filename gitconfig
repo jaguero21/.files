@@ -1,3 +1,15 @@
 [user]
 	name = James Aguero
 	email = james.aguero@gmail.com
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+[core]
+	editor = nvim
+[diff]
+	algorithm = histogram
+[merge]
+	conflictstyle = zdiff3
