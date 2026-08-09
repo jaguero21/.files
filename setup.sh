@@ -2,7 +2,8 @@
 # Idempotent symlink setup for dotfiles.
 # Safe to re-run — ln -sf overwrites existing links.
 #
-# Prerequisites:
+# Prerequisites (brew install):
+#   powerlevel10k zsh-autosuggestions zsh-syntax-highlighting zoxide eza
 #   - TPM (auto-bootstrapped by tmux.conf on first launch)
 
 set -euo pipefail

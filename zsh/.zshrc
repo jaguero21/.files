@@ -5,18 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Oh My Zsh
-export ZSH="$HOME/.oh-my-zsh"
+# Powerlevel10k
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-plugins=(git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  nvm
-)
-
-source $ZSH/oh-my-zsh.sh
+source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
 export KEYTIMEOUT=1
 
@@ -39,9 +30,21 @@ alias fbuild="flutter build ios"
 alias fclean="flutter clean && flutter pub get"
 alias fpub="flutter pub get"
 
+# eza (ls replacement)
+alias ls="eza"
+alias ll="eza -la"
+alias lt="eza --tree --level=2"
+
 # PATH and tools
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Zoxide
+eval "$(zoxide init zsh)"
+
+# Plugins (from Homebrew)
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Auto-attach or start tmux on terminal open (after brew so tmux is on PATH)
 if [ -z "$TMUX" ] && command -v tmux &>/dev/null; then
