@@ -18,7 +18,6 @@ setopt HIST_IGNORE_DUPS
 setopt SHARE_HISTORY
 
 # Git aliases
-alias lg="lazygit"
 alias gs="git status -s"
 alias gl="git log --oneline --graph --decorate --all"
 alias gp="git push"
@@ -30,26 +29,12 @@ alias fbuild="flutter build ios"
 alias fclean="flutter clean && flutter pub get"
 alias fpub="flutter pub get"
 
-# eza (ls replacement)
-alias ls="eza"
-alias ll="eza -la"
-alias lt="eza --tree --level=2"
-
 # PATH and tools
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# Zoxide
-eval "$(zoxide init zsh)"
 
 # Plugins (from Homebrew)
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Auto-attach or start tmux on terminal open (after brew so tmux is on PATH)
-if [ -z "$TMUX" ] && command -v tmux &>/dev/null; then
-  exec tmux new-session -A -s main
-fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
